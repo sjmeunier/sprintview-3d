@@ -35,13 +35,6 @@ namespace Assets.Scripts.DragonAnim
 					}
 
 				}
-				if (elapsedTime > 4.9 && elapsedTime < 6.5f)
-				{
-					if (!_dragonRoar.isPlaying)
-					{
-						_dragonRoar.Play();
-					}
-				}
 				else if (elapsedTime >= 6.5f)
 				{
 					if (fire.isPlaying)
@@ -50,8 +43,17 @@ namespace Assets.Scripts.DragonAnim
 					}
 				}
 
+				if (elapsedTime > 4.9 && elapsedTime < 6.5f && Settings.IsSoundOn)
+				{
+					if (!_dragonRoar.isPlaying)
+					{
+						_dragonRoar.Play();
+					}
+				}
+
+
 				//Play ominous growl
-				if (elapsedTime > 11.0f && elapsedTime < 13.0f)
+				if (elapsedTime > 11.0f && elapsedTime < 13.0f && Settings.IsSoundOn)
 				{
 					if (!_dragonGrowl.isPlaying)
 					{

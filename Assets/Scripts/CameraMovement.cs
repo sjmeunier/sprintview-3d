@@ -110,6 +110,26 @@ namespace Assets.Scripts
 				transform.Translate(new Vector3(0, 0, _keyZoomSpeed * Time.deltaTime));
 				clamp = true;
 			}
+			if (Input.GetKey(KeyCode.D))
+			{
+				transform.Translate(new Vector3(_keyPanSpeed * Time.deltaTime, 0, 0));
+				clamp = true;
+			}
+			if (Input.GetKey(KeyCode.A))
+			{
+				transform.Translate(new Vector3(-_keyPanSpeed * Time.deltaTime, 0, 0));
+				clamp = true;
+			}
+			if (Input.GetKey(KeyCode.S))
+			{
+				transform.Translate(new Vector3(0, 0, -_keyZoomSpeed * Time.deltaTime));
+				clamp = true;
+			}
+			if (Input.GetKey(KeyCode.W))
+			{
+				transform.Translate(new Vector3(0, 0, _keyZoomSpeed * Time.deltaTime));
+				clamp = true;
+			}
 			if (Input.GetKey(KeyCode.Escape))
 			{
 				BurndownChart.ShowSettings();

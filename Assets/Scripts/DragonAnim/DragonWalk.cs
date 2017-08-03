@@ -29,7 +29,7 @@ namespace Assets.Scripts.DragonAnim
 				_dragon.transform.RotateAround(new Vector3(0, 0, 0), Vector3.up, _walkspeed * Time.deltaTime);
 
 				float elapsedTime = Time.time - _startTime;
-				if (elapsedTime > _nextFootstep && elapsedTime < _lastFootstep)
+				if (elapsedTime > _nextFootstep && elapsedTime < _lastFootstep && Settings.IsSoundOn)
 				{
 					if (!_stepAudio.isPlaying)
 					{

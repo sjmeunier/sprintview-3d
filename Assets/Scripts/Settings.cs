@@ -13,6 +13,7 @@ namespace Assets.Scripts
 		public static string Account = "";
 		public static string Project = "";
 		public static string Team = "";
+		public static bool IsSoundOn = false;
 		public static ChartType ChartType = ChartType.BurnupItems;
 
 		public static string[] ChartTypeText =
@@ -36,6 +37,7 @@ namespace Assets.Scripts
 				writer.WriteLine(String.Format("Project: {0}", Project));
 				writer.WriteLine(String.Format("Team: {0}", Team));
 				writer.WriteLine(String.Format("ChartType: {0}", (int) ChartType));
+				writer.WriteLine(String.Format("Sound: {0}", IsSoundOn ? 1 : 0));
 			}
 		}
 
@@ -72,6 +74,9 @@ namespace Assets.Scripts
 									break;
 								case "charttype":
 									ChartType = (ChartType) Int32.Parse(arr[1].Trim());
+									break;
+								case "sound":
+									IsSoundOn = arr[1].Trim() == "1" ? true : false;
 									break;
 							}
 						}

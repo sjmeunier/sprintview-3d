@@ -35,7 +35,7 @@ namespace Assets.Scripts.DragonAnim
 					_dragon.transform.RotateAround(new Vector3(0, 0, 0), Vector3.up, _flySpeed * Time.deltaTime);
 				}
 				
-				if (elapsedTime > _nextFlap && elapsedTime < _lastFlap)
+				if (elapsedTime > _nextFlap && elapsedTime < _lastFlap && Settings.IsSoundOn)
 				{
 					if (!_flapAudio.isPlaying)
 					{
