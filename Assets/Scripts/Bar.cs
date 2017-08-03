@@ -1,20 +1,22 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class Bar : MonoBehaviour
+namespace Assets.Scripts
 {
-
-	public string SelectedBarKey = null;
-
-	// Use this for initialization
-	void Start()
+	public class Bar : MonoBehaviour
 	{
 
-	}
+		public string SelectedBarKey = null;
 
-	// Update is called once per frame
-	void Update()
-	{
+		// Use this for initialization
+		void Start()
+		{
 
+		}
+
+		// Update is called once per frame
+		void Update()
+		{
+
+		}
 	}
 }

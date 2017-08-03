@@ -16,7 +16,7 @@ namespace Assets.Scripts.Vsts.Models
 			WorkItems = new List<WorkItem>();
 		}
 
-		public int GetTotalStoryPoint()
+		public int GetTotalStoryPoints()
 		{
 			return WorkItems.Where(x => x.State != State.New && x.State != State.Approved).Sum(x => x.Effort);
 		}

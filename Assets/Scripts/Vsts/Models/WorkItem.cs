@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using UnityEditor;
 
 namespace Assets.Scripts.Vsts.Models
 {

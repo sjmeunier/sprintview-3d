@@ -72,7 +72,7 @@ namespace Assets.Scripts.Vsts
 				"Basic " + System.Convert.ToBase64String(
 					System.Text.Encoding.ASCII.GetBytes(string.Format("{0}:{1}", this._username, this._token))));
 			headers.Add("Content-Type", "application/json");
-			headers.Add("Content-Length", jsonString.Length.ToString());
+			//headers.Add("Content-Length", jsonString.Length.ToString());
 
 			var endpoint = string.Format(VstsEndpoints.WorkItemsQueryEndPoint, project.Id);
 			WWW www = new WWW(string.Format("{0}{1} ", this._baseUrl, endpoint), System.Text.Encoding.ASCII.GetBytes(jsonString), headers);
